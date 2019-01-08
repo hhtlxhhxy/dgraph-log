@@ -1,0 +1,520 @@
+Log file created at: 2019/01/07 17:55:50
+Running on machine: A01-R06-I7-231-J33GRGY
+Binary: Built with gc go1.11.1 for linux/amd64
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0107 17:55:50.797753    9981 init.go:88] 
+
+Dgraph version   : v1.0.11
+Commit SHA-1     : b2a09c5b
+Commit timestamp : 2018-12-17 09:50:56 -0800
+Branch           : HEAD
+Go version       : go1.11.1
+
+For Dgraph official documentation, visit https://docs.dgraph.io.
+For discussions about Dgraph     , visit https://discuss.dgraph.io.
+To say hi to the community       , visit https://dgraph.slack.com.
+
+Licensed variously under the Apache Public License 2.0 and Dgraph Community License.
+Copyright 2015-2018 Dgraph Labs, Inc.
+
+
+I0107 17:55:50.798679    9981 run.go:98] Setting up grpc listener at: 0.0.0.0:5080
+I0107 17:55:50.798985    9981 run.go:98] Setting up http listener at: 0.0.0.0:6080
+I0107 17:55:51.922493    9981 node.go:151] Setting raft.Config to: &{ID:1 peers:[] learners:[] ElectionTick:100 HeartbeatTick:1 Storage:0xc0004f8960 Applied:0 MaxSizePerMsg:1048576 MaxInflightMsgs:256 CheckQuorum:false PreVote:true ReadOnlyOption:0 Logger:0x1f94370 DisableProposalForwarding:false}
+I0107 17:55:51.923179    9981 node.go:281] Found hardstate: {Term:3 Vote:1 Commit:184320 XXX_unrecognized:[]}
+I0107 17:55:52.088142    9981 node.go:290] Group 0 found 184321 entries
+I0107 17:55:52.088204    9981 raft.go:398] Restarting node for dgraphzero
+I0107 17:55:52.088371    9981 node.go:83] 1 became follower at term 3
+I0107 17:55:52.088491    9981 node.go:83] newRaft 1 [peers: [], term: 3, commit: 184320, applied: 0, lastindex: 184320, lastterm: 3]
+I0107 17:55:52.088664    9981 run.go:265] Running Dgraph Zero...
+I0107 17:55:53.687227    9981 node.go:83] 1 no leader at term 3; dropping index reading msg
+I0107 17:55:53.688167    9981 node.go:173] Setting conf state to nodes:1 
+I0107 17:55:53.688419    9981 raft.go:596] Done applying conf change at 1
+I0107 17:55:55.968855    9981 node.go:83] 1 is starting a new election at term 3
+I0107 17:55:55.968912    9981 node.go:83] 1 became pre-candidate at term 3
+I0107 17:55:55.968984    9981 node.go:83] 1 received MsgPreVoteResp from 1 at term 3
+I0107 17:55:55.969130    9981 node.go:83] 1 became candidate at term 4
+I0107 17:55:55.969153    9981 node.go:83] 1 received MsgVoteResp from 1 at term 4
+I0107 17:55:55.969334    9981 node.go:83] 1 became leader at term 4
+I0107 17:55:55.969361    9981 node.go:83] raft.node: 1 elected leader 1 at term 4
+I0107 17:55:55.970037    9981 raft.go:613] I've become the leader, updating leases.
+I0107 17:55:55.970098    9981 assign.go:44] Updated Lease id: 1843150001. Txn Ts: 10001
+W0107 17:55:56.088896    9981 node.go:550] [1] Read index context timed out
+I0107 23:46:05.032186    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0107 23:46:05.040578    9981 zero.go:386] Connected: cluster_info_only:true 
+I0107 23:46:05.041902    9981 zero.go:368] Got connection request: addr:"10.237.7.230:7083" 
+I0107 23:46:05.055266    9981 pool.go:140] CONNECTED to 10.237.7.230:7083
+I0107 23:46:05.061398    9981 zero.go:495] Connected: id:1 group_id:1 addr:"10.237.7.230:7083" 
+I0107 23:46:08.787786    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0107 23:46:08.787949    9981 zero.go:386] Connected: cluster_info_only:true 
+I0107 23:47:03.277390    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0107 23:47:03.277536    9981 zero.go:386] Connected: cluster_info_only:true 
+I0107 23:47:03.278395    9981 zero.go:368] Got connection request: addr:"10.237.7.232:7083" 
+I0107 23:47:03.287383    9981 pool.go:140] CONNECTED to 10.237.7.232:7083
+I0107 23:47:03.287963    9981 zero.go:495] Connected: id:2 group_id:1 addr:"10.237.7.232:7083" 
+I0107 23:47:34.838266    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0107 23:47:34.838481    9981 zero.go:386] Connected: cluster_info_only:true 
+I0107 23:47:34.839146    9981 zero.go:368] Got connection request: addr:"10.237.7.231:7083" 
+I0107 23:47:34.840698    9981 pool.go:140] CONNECTED to 10.237.7.231:7083
+I0107 23:47:34.856592    9981 zero.go:495] Connected: id:3 group_id:1 addr:"10.237.7.231:7083" 
+E0108 00:06:15.055184    9981 pool.go:206] Echo error from 10.237.7.230:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 00:06:15.281115    9981 pool.go:217] Connection established with 10.237.7.230:7083
+I0108 00:06:15.381244    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 00:06:15.381621    9981 zero.go:386] Connected: cluster_info_only:true 
+I0108 00:06:39.028148    9981 oracle.go:103] Purged below ts:10707, len(o.commits):11, len(o.rowCommit):295193
+I0108 00:06:42.913256    9981 raft.go:552] Writing snapshot at index: 184373, applied mark: 184389
+I0108 00:06:49.909869    9981 oracle.go:103] Purged below ts:11513, len(o.commits):1, len(o.rowCommit):47035
+E0108 00:07:28.287863    9981 pool.go:206] Echo error from 10.237.7.232:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 00:07:28.633427    9981 pool.go:217] Connection established with 10.237.7.232:7083
+E0108 00:07:40.840998    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 00:07:40.890942    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 00:07:56.287682    9981 pool.go:206] Echo error from 10.237.7.232:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 00:07:56.288135    9981 pool.go:217] Connection established with 10.237.7.232:7083
+E0108 00:07:59.287762    9981 pool.go:206] Echo error from 10.237.7.232:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 00:07:59.632477    9981 pool.go:217] Connection established with 10.237.7.232:7083
+E0108 00:08:44.287804    9981 pool.go:206] Echo error from 10.237.7.232:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 00:08:45.215546    9981 pool.go:217] Connection established with 10.237.7.232:7083
+E0108 00:09:25.055118    9981 pool.go:206] Echo error from 10.237.7.230:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 00:09:25.063818    9981 pool.go:217] Connection established with 10.237.7.230:7083
+E0108 00:10:26.841003    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 00:10:27.200177    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 00:10:37.287654    9981 pool.go:206] Echo error from 10.237.7.232:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 00:10:37.878453    9981 pool.go:217] Connection established with 10.237.7.232:7083
+E0108 00:10:54.287637    9981 pool.go:206] Echo error from 10.237.7.232:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 00:10:54.923000    9981 pool.go:217] Connection established with 10.237.7.232:7083
+I0108 00:11:15.523322    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 00:11:15.524015    9981 zero.go:386] Connected: cluster_info_only:true 
+E0108 00:11:35.841041    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 00:11:35.975869    9981 pool.go:217] Connection established with 10.237.7.231:7083
+I0108 00:11:36.075589    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 00:11:36.075792    9981 zero.go:386] Connected: cluster_info_only:true 
+E0108 00:11:45.841006    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 00:11:45.946182    9981 pool.go:217] Connection established with 10.237.7.231:7083
+I0108 00:11:48.324480    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 00:11:48.324820    9981 zero.go:386] Connected: cluster_info_only:true 
+E0108 00:11:56.287802    9981 pool.go:206] Echo error from 10.237.7.232:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 00:11:58.289408    9981 pool.go:217] Connection established with 10.237.7.232:7083
+I0108 00:11:58.389819    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 00:11:58.390230    9981 zero.go:386] Connected: cluster_info_only:true 
+E0108 00:12:04.287783    9981 pool.go:206] Echo error from 10.237.7.232:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 00:12:04.363278    9981 pool.go:217] Connection established with 10.237.7.232:7083
+I0108 00:12:08.578319    9981 oracle.go:103] Purged below ts:11727, len(o.commits):2, len(o.rowCommit):73709
+E0108 00:12:40.287595    9981 pool.go:206] Echo error from 10.237.7.232:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 00:12:40.343690    9981 pool.go:217] Connection established with 10.237.7.232:7083
+E0108 00:12:47.287726    9981 pool.go:206] Echo error from 10.237.7.232:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 00:12:47.395872    9981 pool.go:217] Connection established with 10.237.7.232:7083
+E0108 00:13:50.841116    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 00:13:51.134928    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 00:27:38.055074    9981 pool.go:206] Echo error from 10.237.7.230:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 00:27:38.189104    9981 pool.go:217] Connection established with 10.237.7.230:7083
+E0108 00:36:09.287626    9981 pool.go:206] Echo error from 10.237.7.232:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 00:36:09.418937    9981 pool.go:217] Connection established with 10.237.7.232:7083
+E0108 00:42:11.287823    9981 pool.go:206] Echo error from 10.237.7.232:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 00:42:11.288572    9981 pool.go:217] Connection established with 10.237.7.232:7083
+E0108 00:45:13.287661    9981 pool.go:206] Echo error from 10.237.7.232:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 00:45:13.541547    9981 pool.go:217] Connection established with 10.237.7.232:7083
+I0108 00:47:51.458946    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 00:47:51.459243    9981 zero.go:386] Connected: cluster_info_only:true 
+I0108 00:48:33.876582    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 00:48:33.876967    9981 zero.go:386] Connected: cluster_info_only:true 
+E0108 00:49:07.287680    9981 pool.go:206] Echo error from 10.237.7.232:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 00:49:07.987350    9981 pool.go:217] Connection established with 10.237.7.232:7083
+I0108 00:49:11.549017    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 00:49:11.549230    9981 zero.go:386] Connected: cluster_info_only:true 
+I0108 00:49:15.920074    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 00:49:15.920375    9981 zero.go:386] Connected: cluster_info_only:true 
+E0108 00:52:58.841018    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 00:52:59.699430    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 01:53:24.287637    9981 pool.go:206] Echo error from 10.237.7.232:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 01:53:24.411238    9981 pool.go:217] Connection established with 10.237.7.232:7083
+I0108 02:10:05.622941    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 02:10:05.623289    9981 zero.go:386] Connected: cluster_info_only:true 
+E0108 02:10:56.841141    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 02:10:57.349458    9981 pool.go:217] Connection established with 10.237.7.231:7083
+I0108 02:15:12.741337    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 02:15:12.741593    9981 zero.go:386] Connected: cluster_info_only:true 
+E0108 02:37:55.841012    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 02:37:55.908496    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 02:38:41.287710    9981 pool.go:206] Echo error from 10.237.7.232:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 02:38:41.333143    9981 pool.go:217] Connection established with 10.237.7.232:7083
+I0108 03:14:05.194517    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 03:14:05.195384    9981 zero.go:386] Connected: cluster_info_only:true 
+I0108 04:01:27.560619    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 04:01:27.560976    9981 zero.go:386] Connected: cluster_info_only:true 
+E0108 04:03:35.841128    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 04:03:36.187893    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 04:08:26.287602    9981 pool.go:206] Echo error from 10.237.7.232:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 04:08:26.413348    9981 pool.go:217] Connection established with 10.237.7.232:7083
+E0108 04:12:16.841024    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 04:12:17.201452    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 04:28:52.055163    9981 pool.go:206] Echo error from 10.237.7.230:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 04:28:52.637777    9981 pool.go:217] Connection established with 10.237.7.230:7083
+E0108 04:30:39.287673    9981 pool.go:206] Echo error from 10.237.7.232:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 04:30:39.313857    9981 pool.go:217] Connection established with 10.237.7.232:7083
+I0108 04:32:02.883374    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 04:32:02.884270    9981 zero.go:386] Connected: cluster_info_only:true 
+E0108 04:43:25.287590    9981 pool.go:206] Echo error from 10.237.7.232:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 04:43:26.368419    9981 pool.go:217] Connection established with 10.237.7.232:7083
+I0108 05:01:35.823643    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 05:01:35.823942    9981 zero.go:386] Connected: cluster_info_only:true 
+I0108 05:01:39.188269    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 05:01:39.188499    9981 zero.go:386] Connected: cluster_info_only:true 
+E0108 05:02:06.055066    9981 pool.go:206] Echo error from 10.237.7.230:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 05:02:06.769979    9981 pool.go:217] Connection established with 10.237.7.230:7083
+E0108 05:03:51.287619    9981 pool.go:206] Echo error from 10.237.7.232:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 05:03:51.672529    9981 pool.go:217] Connection established with 10.237.7.232:7083
+E0108 05:12:49.841034    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 05:12:50.173663    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 05:14:36.055055    9981 pool.go:206] Echo error from 10.237.7.230:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 05:14:36.282724    9981 pool.go:217] Connection established with 10.237.7.230:7083
+E0108 05:15:55.287797    9981 pool.go:206] Echo error from 10.237.7.232:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 05:15:55.832297    9981 pool.go:217] Connection established with 10.237.7.232:7083
+I0108 05:15:59.171275    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 05:15:59.171496    9981 zero.go:386] Connected: cluster_info_only:true 
+I0108 05:24:53.706367    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 05:24:53.706582    9981 zero.go:386] Connected: cluster_info_only:true 
+I0108 05:25:39.545683    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 05:25:39.545899    9981 zero.go:386] Connected: cluster_info_only:true 
+E0108 05:37:06.055046    9981 pool.go:206] Echo error from 10.237.7.230:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 05:37:06.265429    9981 pool.go:217] Connection established with 10.237.7.230:7083
+E0108 05:38:25.287635    9981 pool.go:206] Echo error from 10.237.7.232:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 05:38:26.704142    9981 pool.go:217] Connection established with 10.237.7.232:7083
+E0108 05:39:36.055054    9981 pool.go:206] Echo error from 10.237.7.230:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 05:39:37.354756    9981 pool.go:217] Connection established with 10.237.7.230:7083
+E0108 05:40:49.287653    9981 pool.go:206] Echo error from 10.237.7.232:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 05:40:49.358510    9981 pool.go:217] Connection established with 10.237.7.232:7083
+E0108 05:47:35.287673    9981 pool.go:206] Echo error from 10.237.7.232:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 05:47:35.400951    9981 pool.go:217] Connection established with 10.237.7.232:7083
+I0108 05:51:18.051594    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 05:51:18.052052    9981 zero.go:386] Connected: cluster_info_only:true 
+I0108 05:52:51.245861    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 05:52:51.246112    9981 zero.go:386] Connected: cluster_info_only:true 
+I0108 05:53:28.043697    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 05:53:28.044427    9981 zero.go:386] Connected: cluster_info_only:true 
+I0108 06:01:39.565382    9981 oracle.go:103] Purged below ts:26552, len(o.commits):0, len(o.rowCommit):5354
+E0108 06:07:06.055152    9981 pool.go:206] Echo error from 10.237.7.230:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 06:07:07.653230    9981 pool.go:217] Connection established with 10.237.7.230:7083
+E0108 06:17:13.841228    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 06:17:13.915042    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 06:17:15.841140    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 06:17:16.253273    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 06:19:57.840989    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 06:19:58.879386    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 06:20:20.841193    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 06:20:20.853833    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 06:21:35.840976    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 06:21:36.314713    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 06:21:40.287665    9981 pool.go:206] Echo error from 10.237.7.232:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 06:21:41.327337    9981 pool.go:217] Connection established with 10.237.7.232:7083
+I0108 06:22:38.096505    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 06:22:38.096880    9981 zero.go:386] Connected: cluster_info_only:true 
+E0108 06:24:45.840956    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 06:24:46.152907    9981 pool.go:217] Connection established with 10.237.7.231:7083
+I0108 06:25:51.026653    9981 oracle.go:103] Purged below ts:27519, len(o.commits):1, len(o.rowCommit):34853
+E0108 06:26:08.055087    9981 pool.go:206] Echo error from 10.237.7.230:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 06:26:08.341038    9981 pool.go:217] Connection established with 10.237.7.230:7083
+I0108 06:28:11.763288    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 06:28:11.763554    9981 zero.go:386] Connected: cluster_info_only:true 
+E0108 06:35:19.841063    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 06:35:20.149044    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 06:37:06.055088    9981 pool.go:206] Echo error from 10.237.7.230:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 06:37:06.665140    9981 pool.go:217] Connection established with 10.237.7.230:7083
+E0108 06:40:56.287715    9981 pool.go:206] Echo error from 10.237.7.232:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 06:40:57.096186    9981 pool.go:217] Connection established with 10.237.7.232:7083
+E0108 06:49:45.287853    9981 pool.go:206] Echo error from 10.237.7.232:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 06:49:45.558636    9981 pool.go:217] Connection established with 10.237.7.232:7083
+E0108 06:56:09.287644    9981 pool.go:206] Echo error from 10.237.7.232:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 06:56:09.306736    9981 pool.go:217] Connection established with 10.237.7.232:7083
+E0108 06:56:45.840956    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 06:56:45.944095    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 07:00:55.287666    9981 pool.go:206] Echo error from 10.237.7.232:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 07:00:55.707535    9981 pool.go:217] Connection established with 10.237.7.232:7083
+E0108 07:02:50.841191    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 07:02:50.916700    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 07:05:55.287638    9981 pool.go:206] Echo error from 10.237.7.232:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 07:05:55.378073    9981 pool.go:217] Connection established with 10.237.7.232:7083
+E0108 07:06:25.287631    9981 pool.go:206] Echo error from 10.237.7.232:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 07:06:25.337567    9981 pool.go:217] Connection established with 10.237.7.232:7083
+E0108 07:08:46.055041    9981 pool.go:206] Echo error from 10.237.7.230:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 07:08:46.165476    9981 pool.go:217] Connection established with 10.237.7.230:7083
+E0108 07:27:50.841158    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 07:27:51.126901    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 07:29:36.055118    9981 pool.go:206] Echo error from 10.237.7.230:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 07:29:37.236660    9981 pool.go:217] Connection established with 10.237.7.230:7083
+E0108 07:30:55.287713    9981 pool.go:206] Echo error from 10.237.7.232:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 07:30:55.482304    9981 pool.go:217] Connection established with 10.237.7.232:7083
+E0108 07:33:25.287655    9981 pool.go:206] Echo error from 10.237.7.232:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 07:33:26.180304    9981 pool.go:217] Connection established with 10.237.7.232:7083
+I0108 07:35:39.509009    9981 oracle.go:103] Purged below ts:30734, len(o.commits):0, len(o.rowCommit):1801
+E0108 07:40:55.287677    9981 pool.go:206] Echo error from 10.237.7.232:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 07:40:55.507871    9981 pool.go:217] Connection established with 10.237.7.232:7083
+E0108 07:43:04.287657    9981 pool.go:206] Echo error from 10.237.7.232:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 07:43:05.656031    9981 pool.go:217] Connection established with 10.237.7.232:7083
+E0108 08:55:22.841119    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 08:55:24.821192    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 09:38:41.287846    9981 pool.go:206] Echo error from 10.237.7.232:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 09:38:41.293327    9981 pool.go:217] Connection established with 10.237.7.232:7083
+E0108 09:44:36.055293    9981 pool.go:206] Echo error from 10.237.7.230:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 09:44:36.473720    9981 pool.go:217] Connection established with 10.237.7.230:7083
+I0108 10:44:28.190354    9981 oracle.go:103] Purged below ts:30901, len(o.commits):2, len(o.rowCommit):39133
+I0108 11:35:45.413968    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 11:35:45.414615    9981 zero.go:386] Connected: cluster_info_only:true 
+I0108 11:44:33.259070    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 11:44:33.259486    9981 zero.go:386] Connected: cluster_info_only:true 
+E0108 11:47:32.055363    9981 pool.go:206] Echo error from 10.237.7.230:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 11:47:32.677728    9981 pool.go:217] Connection established with 10.237.7.230:7083
+E0108 11:47:39.055161    9981 pool.go:206] Echo error from 10.237.7.230:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 11:47:39.219166    9981 pool.go:217] Connection established with 10.237.7.230:7083
+I0108 11:49:05.261550    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 11:49:05.261938    9981 zero.go:386] Connected: cluster_info_only:true 
+I0108 11:50:48.848824    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 11:50:48.849663    9981 zero.go:386] Connected: cluster_info_only:true 
+E0108 11:52:50.841139    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 11:52:54.574564    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 11:53:47.287855    9981 pool.go:206] Echo error from 10.237.7.232:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 11:54:26.317005    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 11:54:26.317453    9981 zero.go:386] Connected: cluster_info_only:true 
+I0108 11:54:26.317819    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 11:54:26.318138    9981 zero.go:386] Connected: cluster_info_only:true 
+I0108 11:57:14.285117    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 11:57:14.285584    9981 zero.go:386] Connected: cluster_info_only:true 
+I0108 11:57:14.286420    9981 zero.go:368] Got connection request: id:2 addr:"10.237.7.232:7083" 
+I0108 11:57:14.287010    9981 zero.go:495] Connected: id:2 addr:"10.237.7.232:7083" 
+I0108 11:57:15.289656    9981 pool.go:217] Connection established with 10.237.7.232:7083
+E0108 12:00:09.840901    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 12:00:11.796858    9981 pool.go:217] Connection established with 10.237.7.231:7083
+I0108 12:00:11.841735    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 12:00:11.842756    9981 zero.go:386] Connected: cluster_info_only:true 
+I0108 12:00:11.895105    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 12:00:11.895498    9981 zero.go:386] Connected: cluster_info_only:true 
+E0108 12:00:15.840925    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 12:00:20.217771    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 12:01:03.841141    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 12:01:04.468568    9981 pool.go:217] Connection established with 10.237.7.231:7083
+I0108 12:01:26.049794    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 12:01:26.050149    9981 zero.go:386] Connected: cluster_info_only:true 
+E0108 12:01:30.055103    9981 pool.go:206] Echo error from 10.237.7.230:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 12:01:30.084356    9981 pool.go:217] Connection established with 10.237.7.230:7083
+E0108 12:01:34.055132    9981 pool.go:206] Echo error from 10.237.7.230:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 12:01:34.672888    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 12:01:34.673337    9981 zero.go:386] Connected: cluster_info_only:true 
+I0108 12:01:34.946739    9981 pool.go:217] Connection established with 10.237.7.230:7083
+E0108 12:13:01.060053    9981 pool.go:206] Echo error from 10.237.7.232:7083. Err: rpc error: code = Unavailable desc = transport is closing
+I0108 12:13:26.886171    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 12:13:26.886561    9981 zero.go:386] Connected: cluster_info_only:true 
+I0108 12:13:26.887329    9981 zero.go:368] Got connection request: id:2 addr:"10.237.7.232:7083" 
+I0108 12:13:26.887788    9981 zero.go:495] Connected: id:2 addr:"10.237.7.232:7083" 
+I0108 12:13:27.288349    9981 pool.go:217] Connection established with 10.237.7.232:7083
+E0108 12:14:37.055189    9981 pool.go:206] Echo error from 10.237.7.230:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 12:14:37.330883    9981 pool.go:217] Connection established with 10.237.7.230:7083
+E0108 12:15:23.841145    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 12:15:23.966299    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 12:17:14.055167    9981 pool.go:206] Echo error from 10.237.7.230:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 12:17:15.099487    9981 pool.go:217] Connection established with 10.237.7.230:7083
+I0108 12:23:25.131422    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 12:23:25.132478    9981 zero.go:386] Connected: cluster_info_only:true 
+I0108 12:24:21.333517    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 12:24:21.333864    9981 zero.go:386] Connected: cluster_info_only:true 
+I0108 12:24:49.582622    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 12:24:49.582931    9981 zero.go:386] Connected: cluster_info_only:true 
+I0108 12:26:26.208001    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 12:26:26.208386    9981 zero.go:386] Connected: cluster_info_only:true 
+I0108 12:27:55.723155    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 12:27:55.723608    9981 zero.go:386] Connected: cluster_info_only:true 
+I0108 12:29:26.910236    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 12:29:26.910638    9981 zero.go:386] Connected: cluster_info_only:true 
+I0108 12:29:26.911073    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 12:29:26.911434    9981 zero.go:386] Connected: cluster_info_only:true 
+I0108 12:29:26.911551    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 12:29:26.912044    9981 zero.go:386] Connected: cluster_info_only:true 
+E0108 12:31:31.841164    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 12:31:32.133540    9981 pool.go:217] Connection established with 10.237.7.231:7083
+I0108 12:34:58.170088    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 12:34:58.170519    9981 zero.go:386] Connected: cluster_info_only:true 
+I0108 12:36:09.041204    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 12:36:09.042219    9981 zero.go:386] Connected: cluster_info_only:true 
+I0108 12:38:08.199316    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 12:38:08.199724    9981 zero.go:386] Connected: cluster_info_only:true 
+I0108 12:38:50.233304    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 12:38:50.233573    9981 zero.go:386] Connected: cluster_info_only:true 
+I0108 12:39:13.271103    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 12:39:13.271394    9981 zero.go:386] Connected: cluster_info_only:true 
+I0108 12:39:50.447681    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 12:39:50.448005    9981 zero.go:386] Connected: cluster_info_only:true 
+I0108 12:41:25.617667    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 12:41:25.618071    9981 zero.go:386] Connected: cluster_info_only:true 
+E0108 12:45:14.841099    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 12:45:15.347381    9981 pool.go:217] Connection established with 10.237.7.231:7083
+I0108 12:46:35.095779    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 12:46:35.096229    9981 zero.go:386] Connected: cluster_info_only:true 
+I0108 12:47:31.236691    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 12:47:31.236887    9981 zero.go:386] Connected: cluster_info_only:true 
+E0108 12:50:15.841175    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 12:50:20.112520    9981 pool.go:217] Connection established with 10.237.7.231:7083
+I0108 12:54:23.422690    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 12:54:23.423045    9981 zero.go:386] Connected: cluster_info_only:true 
+E0108 12:57:07.055216    9981 pool.go:206] Echo error from 10.237.7.230:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 12:57:07.223341    9981 pool.go:217] Connection established with 10.237.7.230:7083
+E0108 12:57:51.841155    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 12:57:52.207040    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 13:00:21.841129    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 13:00:27.783347    9981 pool.go:217] Connection established with 10.237.7.231:7083
+I0108 13:08:36.936047    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 13:08:36.936439    9981 zero.go:386] Connected: cluster_info_only:true 
+I0108 13:08:56.591685    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 13:08:56.592153    9981 zero.go:386] Connected: cluster_info_only:true 
+I0108 13:10:40.228470    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 13:10:40.228889    9981 zero.go:386] Connected: cluster_info_only:true 
+E0108 13:10:59.840920    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 13:11:02.515056    9981 pool.go:217] Connection established with 10.237.7.231:7083
+I0108 13:11:05.759488    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 13:11:05.759999    9981 zero.go:386] Connected: cluster_info_only:true 
+E0108 13:11:41.840918    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 13:11:41.902573    9981 pool.go:217] Connection established with 10.237.7.231:7083
+I0108 13:11:42.100042    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 13:11:42.100380    9981 zero.go:386] Connected: cluster_info_only:true 
+I0108 13:14:18.371584    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 13:14:18.371888    9981 zero.go:386] Connected: cluster_info_only:true 
+E0108 13:17:17.841112    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 13:17:17.936941    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 13:35:21.841048    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 13:35:24.377370    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 13:37:51.841167    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 13:37:54.816387    9981 pool.go:217] Connection established with 10.237.7.231:7083
+I0108 13:37:54.920462    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 13:37:54.921113    9981 zero.go:386] Connected: cluster_info_only:true 
+E0108 13:39:41.840913    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 13:39:42.237510    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 13:40:59.840961    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 13:41:00.580783    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 13:41:05.841008    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 13:41:06.647817    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 13:47:07.055180    9981 pool.go:206] Echo error from 10.237.7.230:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 13:47:07.642908    9981 pool.go:217] Connection established with 10.237.7.230:7083
+E0108 13:52:07.055135    9981 pool.go:206] Echo error from 10.237.7.230:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 13:52:07.508376    9981 pool.go:217] Connection established with 10.237.7.230:7083
+E0108 14:05:21.841316    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 14:05:27.345283    9981 pool.go:217] Connection established with 10.237.7.231:7083
+I0108 14:05:27.456530    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 14:05:27.462577    9981 zero.go:386] Connected: cluster_info_only:true 
+E0108 14:09:37.055031    9981 pool.go:206] Echo error from 10.237.7.230:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 14:09:39.428140    9981 pool.go:217] Connection established with 10.237.7.230:7083
+E0108 14:10:03.840896    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 14:10:05.094124    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 14:10:20.841107    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 14:10:20.960916    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 14:10:25.841087    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 14:10:26.186616    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 14:11:59.840941    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 14:11:59.872175    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 14:14:19.841068    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 14:14:19.937299    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 14:17:07.055158    9981 pool.go:206] Echo error from 10.237.7.230:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 14:17:08.614307    9981 pool.go:217] Connection established with 10.237.7.230:7083
+E0108 14:19:37.055182    9981 pool.go:206] Echo error from 10.237.7.230:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 14:19:37.673626    9981 pool.go:217] Connection established with 10.237.7.230:7083
+E0108 14:20:00.841156    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 14:20:00.858112    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 14:26:15.841023    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 14:26:15.956694    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 14:30:21.841046    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 14:30:21.981299    9981 pool.go:217] Connection established with 10.237.7.231:7083
+W0108 14:31:53.708756    9981 node.go:85] A tick missed to fire. Node blocks too long!
+W0108 14:31:53.728772    9981 node.go:85] A tick missed to fire. Node blocks too long!
+W0108 14:31:53.748779    9981 node.go:85] A tick missed to fire. Node blocks too long!
+W0108 14:31:53.768766    9981 node.go:85] A tick missed to fire. Node blocks too long!
+W0108 14:31:53.788777    9981 node.go:85] A tick missed to fire. Node blocks too long!
+E0108 14:31:55.389846    9981 pool.go:206] Echo error from 10.237.7.232:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 14:31:55.390783    9981 pool.go:217] Connection established with 10.237.7.232:7083
+I0108 14:31:55.415406    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 14:32:00.943626    9981 zero.go:386] Connected: cluster_info_only:true 
+E0108 14:37:07.055175    9981 pool.go:206] Echo error from 10.237.7.230:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 14:37:07.424491    9981 pool.go:217] Connection established with 10.237.7.230:7083
+E0108 14:37:51.841071    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 14:37:58.223164    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 14:44:38.055105    9981 pool.go:206] Echo error from 10.237.7.230:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 14:44:38.262792    9981 pool.go:217] Connection established with 10.237.7.230:7083
+E0108 14:56:29.841158    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 14:56:32.118932    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 15:00:21.841232    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 15:00:28.969921    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 15:00:40.055140    9981 pool.go:206] Echo error from 10.237.7.230:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 15:00:40.223642    9981 pool.go:217] Connection established with 10.237.7.230:7083
+E0108 15:07:07.055152    9981 pool.go:206] Echo error from 10.237.7.230:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 15:07:07.311360    9981 pool.go:217] Connection established with 10.237.7.230:7083
+E0108 15:11:13.840929    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 15:11:14.071268    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 15:11:41.840935    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 15:11:42.510326    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 15:11:53.841134    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 15:11:54.198266    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 15:17:07.055139    9981 pool.go:206] Echo error from 10.237.7.230:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 15:17:07.990855    9981 pool.go:217] Connection established with 10.237.7.230:7083
+E0108 15:17:35.841041    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 15:17:39.234670    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 15:17:51.841036    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 15:17:51.877738    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 15:19:37.055181    9981 pool.go:206] Echo error from 10.237.7.230:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 15:19:37.209485    9981 pool.go:217] Connection established with 10.237.7.230:7083
+E0108 15:19:53.841171    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 15:19:54.405190    9981 pool.go:217] Connection established with 10.237.7.231:7083
+I0108 15:28:06.019710    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 15:28:06.020563    9981 zero.go:386] Connected: cluster_info_only:true 
+I0108 15:28:44.367227    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 15:28:44.367738    9981 zero.go:386] Connected: cluster_info_only:true 
+I0108 15:29:17.396412    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 15:29:17.396621    9981 zero.go:386] Connected: cluster_info_only:true 
+I0108 15:34:27.355694    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 15:34:27.356371    9981 zero.go:386] Connected: cluster_info_only:true 
+E0108 15:39:38.055237    9981 pool.go:206] Echo error from 10.237.7.230:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 15:39:39.274809    9981 pool.go:217] Connection established with 10.237.7.230:7083
+E0108 15:40:23.841154    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 15:40:32.601186    9981 pool.go:217] Connection established with 10.237.7.231:7083
+I0108 15:46:05.500615    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 15:46:05.501122    9981 zero.go:386] Connected: cluster_info_only:true 
+I0108 15:48:47.309532    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 15:48:47.309827    9981 zero.go:386] Connected: cluster_info_only:true 
+I0108 15:48:47.309935    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 15:48:47.310217    9981 zero.go:386] Connected: cluster_info_only:true 
+E0108 15:50:25.840995    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 15:50:26.046502    9981 pool.go:217] Connection established with 10.237.7.231:7083
+I0108 15:51:08.078058    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 15:51:08.078350    9981 zero.go:386] Connected: cluster_info_only:true 
+E0108 15:52:07.055238    9981 pool.go:206] Echo error from 10.237.7.230:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 15:52:09.204874    9981 pool.go:217] Connection established with 10.237.7.230:7083
+I0108 15:52:09.304676    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 15:52:09.305541    9981 zero.go:386] Connected: cluster_info_only:true 
+E0108 15:54:38.055071    9981 pool.go:206] Echo error from 10.237.7.230:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 15:54:38.623279    9981 pool.go:217] Connection established with 10.237.7.230:7083
+E0108 15:59:37.055151    9981 pool.go:206] Echo error from 10.237.7.230:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 15:59:37.055686    9981 pool.go:217] Connection established with 10.237.7.230:7083
+I0108 16:02:03.544475    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 16:02:03.544854    9981 zero.go:386] Connected: cluster_info_only:true 
+E0108 16:10:23.841066    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 16:10:24.321975    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 16:12:55.841140    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 16:12:58.480719    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 16:14:37.055086    9981 pool.go:206] Echo error from 10.237.7.230:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 16:14:38.555408    9981 pool.go:217] Connection established with 10.237.7.230:7083
+I0108 16:14:38.656788    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 16:14:38.657216    9981 zero.go:386] Connected: cluster_info_only:true 
+E0108 16:17:41.840966    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 16:17:43.237191    9981 pool.go:217] Connection established with 10.237.7.231:7083
+I0108 16:17:47.957559    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 16:17:47.957812    9981 zero.go:386] Connected: cluster_info_only:true 
+E0108 16:17:59.840896    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 16:18:00.242320    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 16:18:19.841033    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 16:18:23.293120    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 16:18:25.840923    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 16:18:27.468760    9981 pool.go:217] Connection established with 10.237.7.231:7083
+I0108 16:18:28.379533    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 16:18:28.379789    9981 zero.go:386] Connected: cluster_info_only:true 
+I0108 16:18:28.379858    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 16:18:28.380240    9981 zero.go:386] Connected: cluster_info_only:true 
+I0108 16:20:59.262184    9981 zero.go:368] Got connection request: cluster_info_only:true 
+I0108 16:20:59.262635    9981 zero.go:386] Connected: cluster_info_only:true 
+E0108 16:21:59.841016    9981 pool.go:206] Echo error from 10.237.7.231:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 16:22:00.538619    9981 pool.go:217] Connection established with 10.237.7.231:7083
+E0108 16:22:07.055083    9981 pool.go:206] Echo error from 10.237.7.230:7083. Err: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I0108 16:22:07.183722    9981 pool.go:217] Connection established with 10.237.7.230:7083
